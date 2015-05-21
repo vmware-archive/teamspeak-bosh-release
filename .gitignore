@@ -1,0 +1,17 @@
+config/
+assets/
+stemcells/
+dev_releases/
+.blobs
+blobs/
+.dev_builds
+.idea
+.DS_Store
+.final_builds/jobs/**/*.tgz
+.final_builds/packages/**/*.tgz
+*.swp
+*~
+*#
+#*
+backups/*
+releases/**/*.tgz

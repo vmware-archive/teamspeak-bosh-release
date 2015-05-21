@@ -1,0 +1,7 @@
+---
+name: teamspeak
+templates:
+  ctl.sh: bin/ctl
+
+packages:
+- teamspeak-3.0.11.3

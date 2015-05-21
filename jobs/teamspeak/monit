@@ -1,0 +1,5 @@
+check process teamspeak
+  with pidfile /var/vcap/sys/run/teamspeak/teamspeak.pid
+  start program "/var/vcap/jobs/teamspeak/bin/ctl start"
+  stop program "/var/vcap/jobs/teamspeak/bin/ctl stop"
+  group vcap
