@@ -11,7 +11,7 @@
 BINARYPATH=/var/vcap/packages/teamspeak-3.0.11.3
 LIBRARYPATH=$BINARYPATH
 BINARYNAME=ts3server_linux_amd64
-TEAMSPEAK_PID=/var/vcap/sys/run/teamspeak/teamspeak.pid
+TEAMSPEAK_PID=/var/vcap/sys/run/teamspeak.pid
 
 cd $BINARYPATH
 
