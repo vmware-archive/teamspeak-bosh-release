@@ -1,0 +1,56 @@
+---
+name: teamspeak
+director_uuid: #Director UUID
+compilation:
+  cloud_properties:
+    ram: 2048
+    disk: 4096
+    cpu: 2
+  network: default
+  reuse_compilation_vms: true
+  workers: 1
+jobs:
+- instances: 1
+  name: teamspeak
+  networks:
+  - name: default
+    static_ips: [ 10.85.1.2 ] #IP of teamspeak server
+  resource_pool: teamspeak_pool
+  templates:
+  - release: teamspeak
+    name: teamspeak
+networks:
+- name: default
+  subnets:
+  - cloud_properties:
+      name: NetworkABC
+    range: 10.85.1.0/24
+    dns:
+    - 8.8.8.8
+    - 8.8.4.4
+    gateway: 10.85.1.1
+    static:
+    - 10.85.1.2
+    reserved:
+    - 10.85.5.5 - 10.85.5.254
+releases:
+- name: teamspeak
+  version: latest
+resource_pools:
+- cloud_properties:
+    ram: 2048
+    disk: 20480
+    cpu: 1
+  name: teamspeak_pool
+  network: default
+  stemcell:
+    name: bosh-vsphere-esxi-ubuntu-trusty-go_agent
+    version: latest
+update:
+  canaries: 1
+  canary_watch_time: 30000 - 600000
+  max_in_flight: 20
+  serial: false
+  update_watch_time: 30000 - 600000
+properties:
+  teamspeak_admin_token: #Admin token 
