@@ -1,7 +1,12 @@
 ---
 name: teamspeak
 templates:
-  ctl.sh: bin/ctl
+  ctl.sh.erb: bin/ctl
 
 packages:
 - teamspeak-3.0.11.3
+
+properties:
+  teamspeak_admin_token:
+    description: 'The admin privilege token.'
+    default: 'admin-token'

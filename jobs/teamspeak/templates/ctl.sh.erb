@@ -17,6 +17,15 @@ cd $BINARYPATH
 
 case "$1" in
 	start)
+		set +e
+		dpkg-query -W -f='${Status}\n' virtualbox | grep 'install ok installed'
+		SQLITE_INSTALLED=$?
+		set -e
+
+		if [ $SQLITE_INSTALLED -ne 0 ]; then
+			apt-get install sqlite3
+		fi
+
 		if [ -e $TEAMSPEAK_PID ]; then
 			if ( kill -0 $(cat $TEAMSPEAK_PID) 2> /dev/null ); then
 				echo "The server is already running, try restart or stop"
@@ -43,6 +52,13 @@ case "$1" in
 				else
 					echo $PID > $TEAMSPEAK_PID
 					echo "TeamSpeak 3 server started, for details please view the log file"
+
+					if [ $SQLITE_INSTALLED -ne 0 ]; then
+						echo "Installing SQLite3"
+						apt-get install sqlite3
+					fi
+					echo "Setting admin token"
+					sqlite3 $BINARYPATH/ts3server.sqlitedb "UPDATE tokens SET token_key='<%= p('teamspeak_admin_token') %>' WHERE 1=1;"
 				fi
 			else
 				echo "${BINARNAME} is not exectuable, cannot start TeamSpeak 3 server"
