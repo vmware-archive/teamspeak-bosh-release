@@ -52,12 +52,11 @@ case "$1" in
 				else
 					echo $PID > $TEAMSPEAK_PID
 					echo "TeamSpeak 3 server started, for details please view the log file"
+					
+					echo "Allow Teamspeak Server to write random admin Token"
+					sleep 5
+					echo "Update admin token"
 
-					if [ $SQLITE_INSTALLED -ne 0 ]; then
-						echo "Installing SQLite3"
-						apt-get install sqlite3
-					fi
-					echo "Setting admin token"
 					sqlite3 $BINARYPATH/ts3server.sqlitedb "UPDATE tokens SET token_key='<%= p('teamspeak_admin_token') %>' WHERE 1=1;"
 				fi
 			else
