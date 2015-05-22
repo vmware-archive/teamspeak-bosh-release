@@ -14,7 +14,7 @@ license:
   version: 596316b93cdeded339f835660a5b50eac2ecc57a
   fingerprint: 596316b93cdeded339f835660a5b50eac2ecc57a
   sha1: 280a442498dfe7156ffc80ac25881958fdb59202
-commit_hash: 9be37661
-uncommitted_changes: true
-name: teamspeak-bosh
+commit_hash: cfadcf01
+uncommitted_changes: false
+name: teamspeak
 version: '1'

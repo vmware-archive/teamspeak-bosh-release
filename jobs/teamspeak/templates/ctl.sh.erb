@@ -18,7 +18,7 @@ cd $BINARYPATH
 case "$1" in
 	start)
 		set +e
-		dpkg-query -W -f='${Status}\n' virtualbox | grep 'install ok installed'
+		dpkg-query -W -f='${Status}\n' sqlite3 | grep 'install ok installed'
 		SQLITE_INSTALLED=$?
 		set -e
 
