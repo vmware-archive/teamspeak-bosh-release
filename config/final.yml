@@ -1,0 +1,6 @@
+---
+blobstore:
+  provider: s3
+  options:
+    bucket_name: teamspeak-boshrelease-blobs
+final_name: teamspeak

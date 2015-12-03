@@ -1,4 +1,5 @@
-config/
+config/private.yml
+config/dev.yml
 assets/
 stemcells/
 dev_releases/
