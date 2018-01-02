@@ -1,0 +1,29 @@
+---
+name: teamspeak
+releases:
+- name: teamspeak
+  version: latest
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest
+update:
+  canaries: 1
+  canary_watch_time: 30000 - 600000
+  max_in_flight: 20
+  serial: false
+  update_watch_time: 30000 - 600000
+instance_groups:
+- name: teamspeak
+  azs:
+  - z1
+  instances: 1
+  vm_type: teamspeak
+  stemcell: default
+  networks:
+  - name: teamspeak
+  jobs:
+  - name: teamspeak
+    release: teamspeak
+    properties:
+      teamspeak_admin_token: {{teamspeak-admin-token}}
