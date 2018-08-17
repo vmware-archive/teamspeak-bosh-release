@@ -4,7 +4,7 @@ templates:
   ctl.sh.erb: bin/ctl
 
 packages:
-- teamspeak-3.0.13.8
+- teamspeak-3.3.0
 
 properties:
   teamspeak_admin_token:
