@@ -28,7 +28,8 @@ case "$1" in
 		set -e
 
 		if [ $SQLITE_INSTALLED -ne 0 ]; then
-			apt-get install sqlite3
+			apt-get update -y
+			apt-get install -y sqlite3
 		fi
 
 		if [ -e $TEAMSPEAK_PID ]; then

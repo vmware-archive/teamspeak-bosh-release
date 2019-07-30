@@ -7,4 +7,6 @@ builds:
     version: "1"
   71ac95b1-92a8-4fdd-76ac-0cc4cc0b4ef7:
     version: "3"
+  dd3369ba-7124-4fe0-6bb7-b12e50b065e1:
+    version: 3.3.1
 format-version: "2"
