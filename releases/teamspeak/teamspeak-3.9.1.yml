@@ -1,0 +1,21 @@
+name: teamspeak
+version: 3.9.1
+commit_hash: efa80e6
+uncommitted_changes: false
+jobs:
+- name: teamspeak
+  version: 958dcfbcd76ae07887e1150395c55861f36fc3c5b5f7baaddffd2cd4dde9d1c5
+  fingerprint: 958dcfbcd76ae07887e1150395c55861f36fc3c5b5f7baaddffd2cd4dde9d1c5
+  sha1: sha256:e93fb41da1126126875be29bf5c4cb62b375d46f124b37703b9779af5ac7c8ce
+  packages:
+  - teamspeak-3.9.1
+packages:
+- name: teamspeak-3.9.1
+  version: 45b4bfde994cb1fdb1848e9da5b420e9f4d9c2007dcf1eac8298256d6708d46d
+  fingerprint: 45b4bfde994cb1fdb1848e9da5b420e9f4d9c2007dcf1eac8298256d6708d46d
+  sha1: sha256:830dc3949c15d47b90fc205fec4fe4763b9a805c759ed46710a625dcda0f7bc0
+  dependencies: []
+license:
+  version: e8def89197c765e89c1720774cec7dae17032441ec99861b1cb744b6879e0397
+  fingerprint: e8def89197c765e89c1720774cec7dae17032441ec99861b1cb744b6879e0397
+  sha1: sha256:c43e0af4d0698fdc6a3f2537852c9d52046b22280c2457280a0b0b87995c7cda

@@ -11,7 +11,7 @@
 
 COMMANDLINE_PARAMETERS="logpath=/var/vcap/sys/log/teamspeak"
 
-export BINARYPATH=/var/vcap/packages/teamspeak-3.3.0
+export BINARYPATH=/var/vcap/packages/teamspeak-3.9.1
 export LIBRARYPATH=$BINARYPATH
 export BINARYNAME=ts3server
 export TEAMSPEAK_PID=/var/vcap/sys/run/teamspeak.pid
@@ -59,7 +59,7 @@ case "$1" in
 				chmod u+x "${BINARYNAME}"
 			fi
 			if [ -x "$BINARYNAME" ]; then
-				export LD_LIBRARY_PATH="${LIBRARYPATH}:${LD_LIBRARY_PATH}"					
+				export LD_LIBRARY_PATH="${LIBRARYPATH}:${LD_LIBRARY_PATH}"
 				"./${BINARYNAME}" ${COMMANDLINE_PARAMETERS} > /dev/null &
  				PID=$!
 				ps -p ${PID} > /dev/null 2>&1
@@ -100,7 +100,7 @@ case "$1" in
 					else
 						break
 					fi
-					c=$(($c+1)) 
+					c=$(($c+1))
 				done
 			fi
 			if ( kill -0 $(cat $TEAMSPEAK_PID) 2> /dev/null ); then
