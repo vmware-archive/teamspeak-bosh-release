@@ -22,7 +22,7 @@ A BOSH release of the TeamSpeak application
     bosh deploy -d teamspeak teamspeak.yml -v teamspeak-admin-token=<YOUR_UNIQUE_ID>
     ```
     
-6. Spin up your teamspeak client and enter the public UP and the `teamspeak-admin-token` you created
+6. Spin up your teamspeak client and enter the public IP and the `teamspeak-admin-token` you created
 7. You should then be prompted to enter the "Privileged Key" which is your `teamspeak-admin-token`
 
 ## Bugs
