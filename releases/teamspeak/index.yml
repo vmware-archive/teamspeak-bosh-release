@@ -5,6 +5,10 @@ builds:
     version: 3.3.0
   46551d02-6aad-43bb-80aa-e8be9ce562fb:
     version: "1"
+  4c970797-ca84-4ef3-4ed2-ef140d7a938c:
+    version: 3.11.0
+  70789004-7612-455d-44a5-6f28cffc32a0:
+    version: 3.11.0.patch
   71ac95b1-92a8-4fdd-76ac-0cc4cc0b4ef7:
     version: "3"
   dd3369ba-7124-4fe0-6bb7-b12e50b065e1:
